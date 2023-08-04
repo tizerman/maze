@@ -1,7 +1,6 @@
 fun main() {
     Game.play()
 }
-
 object Game {
     fun play() {
         val (width, height) = readMazeInput()
@@ -14,11 +13,10 @@ object Game {
             visualMap ()
         }
     }
-
     private fun readMazeInput(): Pair<Int, Int> {
         var input: String?
-        var width: Int
-        var height: Int
+        val width: Int
+        val height: Int
 
         while (true) {
             print("Enter width and height of the maze (separated by space): ")
@@ -37,7 +35,6 @@ object Game {
             }
             println("Invalid input. Please enter two valid numbers separated by space.")
         }
-
         return Pair(width, height)
     }
 }

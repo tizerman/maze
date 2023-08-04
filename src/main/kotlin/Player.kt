@@ -1,11 +1,6 @@
 import kotlin.random.Random
 import kotlin.random.nextInt
-
-class Player (x: Int, y: Int, maze: Maze) {
-    var px = x
-    var py = y
-    val maze = maze
-
+class Player (var px: Int, var py: Int, val maze: Maze) {
     private enum class Direction(private val directionCoordinate: Coordinate) {
         North(Coordinate(0, -2)),
         East(Coordinate(2, 0)),
@@ -13,7 +8,6 @@ class Player (x: Int, y: Int, maze: Maze) {
         West(Coordinate(-2, 0));
         fun getCoordinate() = directionCoordinate
     }
-
     fun build() {
         val dir = mutableListOf<Direction>().apply {
             if (px > 1) add(Direction.West)
@@ -31,5 +25,4 @@ class Player (x: Int, y: Int, maze: Maze) {
         }
     }
 }
-
 data class Coordinate(val x: Int, val y: Int)
