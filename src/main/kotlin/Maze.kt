@@ -1,6 +1,4 @@
-class Maze (width: Int, height: Int) {
-    val width = width
-    val height = height
+class Maze (val width: Int, val height: Int) {
     val wall = "\u2593" + "\u2593" + "\u2593"
     val empty = " * "
     val grid = Array(height + 2) { arrayOfNulls<String>(width + 2) }
