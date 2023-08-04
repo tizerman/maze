@@ -14,7 +14,7 @@ class Maze (val width: Int, val height: Int) {
     }
 
     fun visualMap() {
-        for (row in grid) println(row.map { it ?: "   " }.joinToString(""))
+        for (row in grid) println(row.joinToString("") { it ?: "   " })
     }
 
     fun completeMaze(): Boolean {
