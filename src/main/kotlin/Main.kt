@@ -20,7 +20,7 @@ object Game {
 
         while (true) {
             print("Enter width and height of the maze (separated by space): ")
-            input = readLine()
+            input = readlnOrNull()
 
             val parts = input?.split(" ")
             if (parts != null && parts.size == 2) {
