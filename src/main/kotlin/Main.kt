@@ -10,8 +10,12 @@ object Game {
         val player = Player(1,1, maze)
         maze.run {
             while (!(completeMaze())) player.build()
-            visualMap ()
+            //visualMap ()
         }
+        player.findRoute()
+        //player.visualWay()
+        player.drawRoute()
+        maze.visualMap ()
     }
     private fun readMazeInput(): Pair<Int, Int> {
         var input: String?
